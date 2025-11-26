@@ -6,7 +6,7 @@ router.get("/", (req, res)=>{
     res.status(200).send("Real-Time Collaborative Data API is running");
 })
 //About page
-router.get("about", (req, res)=>{
+router.get("/about", (req, res)=>{
     res.status(200).send("This is a Real-Time Collaborative Data API built with Express.js");
 })
 //Login page

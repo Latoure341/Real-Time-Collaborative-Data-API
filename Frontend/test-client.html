@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Socket.IO Test</title>
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+  </head>
+  <body>
+    <script>
+      const socket = io('http://localhost:3000');
+      socket.on('connect', () => {
+        console.log('connected, id=', socket.id);
+        socket.emit('join', 'room1');
+        socket.emit('message', { room: 'room1', message: 'Hello from browser client' });
+      });
+      socket.on('message', (payload) => console.log('message', payload));
+      socket.on('user-joined', (u) => console.log('user joined', u));
+      socket.on('user-left', (u) => console.log('user left', u));
+    </script>
+  </body>
+</html>
