@@ -1,12 +1,9 @@
 const cors = require('cors');
-const express = require('express');
-const middle = express();
 
-// Enable CORS for all routes
-middle.use(cors());
-middle.use(express.json());
+// CORS middleware
+const corsMiddleware = cors();
 
-//404 handler
+// 404 handler
 function notFound(req, res, next) {
     res.status(404).json({ message: "Route not found" });
 }
@@ -17,4 +14,4 @@ function errorHandler(err, req, res, next) {
     res.status(500).json({ message: "Internal Server Error" });
 }
 
-module.exports = { middle, notFound, errorHandler };
+module.exports = { corsMiddleware, notFound, errorHandler };

@@ -1,13 +1,17 @@
 {
   "dependencies": {
     "@prisma/client": "^6.16.2",
+    "better-sqlite3": "^12.5.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "morgan": "^1.10.1",
     "nodemon": "^3.1.10",
     "pg": "^8.16.3",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "y-protocols": "^1.0.6",
+    "y-websocket": "^3.0.0",
+    "yjs": "^13.6.27"
   },
   "scripts": {
     "start": "node src/index.js",
