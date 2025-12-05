@@ -30,20 +30,21 @@ WebSockets (or WS layer depending on your integration)
 
 Custom persistence layer (can be extended to Redis, MongoDB, PostgreSQL, etc.)
 
-📦 Installation
+# Installation
+
 git clone <repo-url>
 cd src
 npm install
 
-▶️ Running the Server
-node index.js
+# Running the Server
 
+node index.js
 
 or (recommended)
 
 npm run dev
 
-🔌 API Overview
+# API Overview
 /collaboration/
 
 Handles core real-time document logic.
